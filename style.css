@@ -1,0 +1,209 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+width: 100%;
+    background-color: rgb(95, 119, 122);
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    margin: auto;
+}
+
+.logo img {
+    height: 80px;
+}
+
+ul {
+    display: flex;
+    gap: 20px;
+    font-size: 20px;
+}
+
+li {
+    list-style-type: none;
+    cursor: pointer;
+}
+
+.three-dot {
+    cursor: pointer;
+}
+
+/* VEDIOS */
+
+
+.vedios {
+    width: 100%;
+    margin-top: 1px;
+}
+
+.swiper {
+    width: 100%;
+    height: fit-content;
+}
+
+.swiper-slide img {
+    width: 100%;
+}
+
+/* COURCES */
+
+.cources {
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+
+}
+
+.cources h1 {
+    text-align: center;
+    font-size: 60px;
+    text-transform: uppercase;
+    color: blueviolet;
+}
+
+.flex {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.flex div {
+    border: 5px solid purple;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+    height: 200px;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    background-color: rgba(0, 0, 255, 0.568);
+    color: yellow;
+    cursor: pointer;
+}
+
+.flex div:hover {
+    box-shadow: 0px 5px 20px 5px blue;
+    transform: scale(1.05, 1.05);
+    transition: .3s linear;
+}
+
+
+/* popup */
+
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+    visibility: hidden;
+    width: 400px;
+    height: 400px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 99;
+    top: 300%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.offer-container{
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.amount{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    font-weight: 700;
+}
+.green{
+    color: rgb(17, 192, 17);
+}
+
+button{
+    background-color: orange;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    padding: 10px;
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 300px) and (max-width:719px){
+    .popup .popuptext{
+        width: 200px;
+    }
+    .flex div{
+        width: 100%;
+    }
+}
+@media screen and (min-width: 720px) and (max-width:833px){
+    .popup .popuptext{
+        width: 300px;
+    }
+    .flex div{
+        width: 300px;
+    }
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container">
+        <div class="navbar">
+            <header>
+                <div class="logo">
+                    <img src="https://global-uploads.webflow.com/5e157548d6f7910beea4e2d6/62d0f73ecfafa48f66cb3e0b_free-counseling-logo-maker-p-500.png"
+                        alt="counseling logo">
+                </div>
+                <div class="offer-popup">
+                    <ul>
+                        <li class="popup" onclick="popupfunc()">Offers
+                        <span class="popuptext" id="myPopup">
+                            <div class="popup-container">
+                                <h2>Booking Summary</h2>
+                                <div class="offer-container">
+                                    <div class="amount">
+                                        <p>Amount</p>
+                                        <p>INR 1800</p>
+                                    </div>
+                                    <hr>
+                                    <div class="amount green">
+                                        <p>Offer Discount</p>
+                                        <p>-INR 450</p>
+                                    </div>
+                                    <hr>
+                                    <div class="amount">
+                                        <p>Total</p>
+                                        <p>1350</p>
+                                    </div>
+                                    <hr>
+                                </div>
+                                <button>Confirm and Pay Now</button>
+                            </div>
+                        </span></li>
+                        <li>About Us</li>
+                        <li>Services</li>
+                        <li>Appointment</li>
+                        <li>Contact Us</li>
+                    </ul>
+                </div>
+                <div class="three-dot">
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
+            </header>
+        </div>
+
+        <section>
+            <div class="vedios">
+
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide"><img
+                                src="https://www.startupnrise.com/wp-content/uploads/2021/02/education-concept-student-studying-brainstorming-campus-concept-close-up-students-discussing-their-subject-books-textbooks-selective-focus-660x330.jpg"
+                                alt=""></div>
+                        <div class="swiper-slide"><img src="https://cache.careers360.mobi/media/article_images/2022/11/30/feature-image-school-students.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="https://cache.careers360.mobi/media/article_images/2023/1/7/shutterstock_1660487284.jpg" alt=""></div>
+
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section>
+            <div class="cources">
+                <h1>cources</h1>
+                <div class="flex">
+                    <div>What after 12th class?</div>
+                    <div>Medical College Counseling</div>
+                    <div>Engineering College Counseling</div>
+                    <div>Basic way to Become a Scientist</div>
+                    <div>Get a Top Colleges at low rank</div>
+                    <div>Best way to become an Actor A-Z case study</div>
+                    <div>Career in Finance</div>
+                    <div>Career in Aviation sector</div>
+                    <div>Jobs in 2023</div>
+                </div>
+            </div>
+        </section>
+
+
+
+    </div>
+
+
+
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+
+const swiper = new Swiper('.swiper', {
+    autoplay: {
+        delay:3000,
+        disableOnInteraction:false
+    },
+    loop: true,
+  
+    pagination: {
+      el: '.swiper-pagination',
+      clickable:true
+    },
+  
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  
+  });
+
+    </script>
+</body>
+
+</html>
