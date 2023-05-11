@@ -352,6 +352,9 @@
         margin-top: 10px;
         font-size: 10px;
       }
+      .swiper-slide video{
+        height: 100%;
+      }
 }
 
 @media screen and (min-width: 549px) and (max-width:833px){
@@ -361,4 +364,7 @@
     li{
         font-size: 15px;
     }
+    .swiper-slide video{
+        height: 100%;
+      }
 }
