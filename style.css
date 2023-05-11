@@ -37,6 +37,7 @@ li {
 .three-dot {
     cursor: pointer;
     display: none;
+    border: none;
 }
 
 
