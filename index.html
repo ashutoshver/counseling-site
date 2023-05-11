@@ -9,6 +9,7 @@
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
@@ -22,6 +23,7 @@
                         alt="counseling logo">
                 </div>
                 <div class="offer-popup">
+                    <button class="three-dot" onclick="openNav()"><i class="fa-solid fa-ellipsis-vertical"></i></button>
                     <ul>
                         <li class="popup" onclick="popupfunc()">Offers
                         <span class="popuptext" id="myPopup">
@@ -53,9 +55,6 @@
                         <li>Contact Us</li>
                     </ul>
                 </div>
-                <div class="three-dot">
-                    <i class="fa-solid fa-ellipsis-vertical"></i>
-                </div>
             </header>
         </div>
 
@@ -75,10 +74,6 @@
                     </div>
                     <!-- If we need pagination -->
                     <div class="swiper-pagination"></div>
-
-                    <!-- If we need navigation buttons -->
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
 
                 </div>
 
@@ -124,10 +119,7 @@ const swiper = new Swiper('.swiper', {
       clickable:true
     },
   
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
+   
   
   });
 
