@@ -16,47 +16,51 @@
 
 <body>
     <div id="container">
-        <div class="navbar">
-            <header>
+        <header class="header">
+            <div class="container">
+              <div class="row align-items-center justify-content-between">
                 <div class="logo">
-                    <img src="https://global-uploads.webflow.com/5e157548d6f7910beea4e2d6/62d0f73ecfafa48f66cb3e0b_free-counseling-logo-maker-p-500.png"
-                        alt="counseling logo">
+                  <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmcfv1Mrlyna9sZzL2XZnrYxjhgwMlCDnFEQ&usqp=CAU"
+                    alt="counseling logo"></a>
                 </div>
-                <div class="offer-popup">
-                    <button class="three-dot" onclick="openNav()"><i class="fa-solid fa-ellipsis-vertical"></i></button>
-                    <ul>
-                        <li class="popup" onclick="popupfunc()">Offers
-                        <span class="popuptext" id="myPopup">
-                            <div class="popup-container">
-                                <h2>Booking Summary</h2>
-                                <div class="offer-container">
-                                    <div class="amount">
-                                        <p>Amount</p>
-                                        <p>INR 1800</p>
-                                    </div>
-                                    <hr>
-                                    <div class="amount green">
-                                        <p>Offer Discount</p>
-                                        <p>-INR 450</p>
-                                    </div>
-                                    <hr>
-                                    <div class="amount">
-                                        <p>Total</p>
-                                        <p>1350</p>
-                                    </div>
-                                    <hr>
-                                </div>
-                                <button>Confirm and Pay Now</button>
-                            </div>
-                        </span></li>
-                        <li>About Us</li>
-                        <li>Services</li>
-                        <li>Appointment</li>
-                        <li>Contact Us</li>
-                    </ul>
-                </div>
-            </header>
-        </div>
+                <button type="button" class="nav-toggler">
+                  <span></span>
+                </button>
+                <nav class="nav">
+                  <ul>
+                    <li class="popup" onclick="popupfunc()">Offers
+                      <span class="popuptext" id="myPopup">
+                          <div class="popup-container">
+                              <h2>Booking Summary</h2>
+                              <div class="offer-container">
+                                  <div class="amount">
+                                      <p>Amount</p>
+                                      <p>INR 1800</p>
+                                  </div>
+                                  <hr>
+                                  <div class="amount green">
+                                      <p>Offer Discount</p>
+                                      <p>-INR 450</p>
+                                  </div>
+                                  <hr>
+                                  <div class="amount">
+                                      <p>Total</p>
+                                      <p>1350</p>
+                                  </div>
+                                  <hr>
+                              </div>
+                              <button>Confirm and Pay Now</button>
+                          </div>
+                      </span>
+                  </li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">contact Us</a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </header>
 
         <section>
             <div class="vedios">
@@ -68,8 +72,12 @@
                         <div class="swiper-slide"><img
                                 src="https://www.startupnrise.com/wp-content/uploads/2021/02/education-concept-student-studying-brainstorming-campus-concept-close-up-students-discussing-their-subject-books-textbooks-selective-focus-660x330.jpg"
                                 alt=""></div>
-                        <div class="swiper-slide"><img src="https://cache.careers360.mobi/media/article_images/2022/11/30/feature-image-school-students.jpg" alt=""></div>
-                        <div class="swiper-slide"><img src="https://cache.careers360.mobi/media/article_images/2023/1/7/shutterstock_1660487284.jpg" alt=""></div>
+                        <div class="swiper-slide"><img
+                                src="https://cache.careers360.mobi/media/article_images/2022/11/30/feature-image-school-students.jpg"
+                                alt=""></div>
+                        <div class="swiper-slide"><img
+                                src="https://cache.careers360.mobi/media/article_images/2023/1/7/shutterstock_1660487284.jpg"
+                                alt=""></div>
 
                     </div>
                     <!-- If we need pagination -->
@@ -83,6 +91,7 @@
         <section>
             <div class="cources">
                 <h1>cources</h1>
+                <hr>
                 <div class="flex">
                     <div>What after 12th class?</div>
                     <div>Medical College Counseling</div>
@@ -107,21 +116,21 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script>
 
-const swiper = new Swiper('.swiper', {
-    autoplay: {
-        delay:3000,
-        disableOnInteraction:false
-    },
-    loop: true,
-  
-    pagination: {
-      el: '.swiper-pagination',
-      clickable:true
-    },
-  
-   
-  
-  });
+        const swiper = new Swiper('.swiper', {
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false
+            },
+            loop: true,
+
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true
+            },
+
+
+
+        });
 
     </script>
 </body>

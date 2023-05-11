@@ -1,49 +1,149 @@
-* {
-    padding: 0;
-    margin: 0;
+:root {
+    --color-1: #2f3240fb;
+  }
+  
+  body {
+    font-family: sans-serif;
+    background-color: #e8eef3;
+  }
+  
+  * {
     box-sizing: border-box;
-}
-
-.navbar {
-width: 100%;
-    background-color: rgb(95, 119, 122);
-    color: white;
-    
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 95%;
+    margin: 0;
+    padding: 0;
+  }
+  .logo img{
+    height: 60px;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  .container {
+    max-width: 1170px;
     margin: auto;
-}
-
-.logo img {
-    height: 80px;
-}
-
-ul {
+  }
+  
+  .row {
     display: flex;
-    gap: 20px;
-    font-size: 20px;
-}
-
-li {
-    list-style-type: none;
+    flex-wrap: wrap;
+  }
+  
+  .align-items-center {
+    align-items: center;
+  }
+  
+  .justify-content-between {
+    justify-content: space-between;
+  }
+  
+  /*header*/
+  .header {
+    background-color: var(--color-1);
+    padding: 13px 0;
+    line-height: 1.5;
+    z-index: 1;
+  }
+  
+  .header .logo,
+  .header .nav {
+    padding: 0 15px;
+  }
+  
+  .header .logo a {
+    font-size: 30px;
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: capitalize;
+  }
+  
+  .header .nav ul li {
+    display: inline-block;
+    margin-left: 35px;
+    color: white;
+  }
+  
+  .header .nav ul li a {
+    display: block;
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    padding: 10px 0;
+    transition: all 0.5s ease;
+  }
+  
+  .header .nav ul li a.active,
+  .header .nav ul li a:hover {
+    color: white;
+  }
+  
+  .nav-toggler {
+    height: 34px;
+    width: 44px;
+    background-color: #ffffff;
+    border-radius: 4px;
     cursor: pointer;
-}
-
-.three-dot {
-    cursor: pointer;
-    display: none;
     border: none;
-}
-
-
-/* popup */
-
-.popup {
+    display: none;
+    margin-right: 15px;
+  }
+  
+  .nav-toggler:focus {
+    outline: none;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+  }
+  
+  .nav-toggler span {
+    height: 2px;
+    width: 20px;
+    background-color: var(--color-1);
+    display: block;
+    margin: auto;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  
+  .nav-toggler.active span {
+    background-color: transparent;
+  }
+  
+  .nav-toggler span::before,
+  .nav-toggler span::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-1);
+    transition: all 0.3s ease;
+  }
+  
+  .nav-toggler span::before {
+    transform: translateY(-6px);
+  }
+  
+  .nav-toggler.active span::before {
+    transform: rotate(45deg);
+  }
+  
+  .nav-toggler span::after {
+    transform: translateY(6px);
+  }
+  
+  .nav-toggler.active span::after {
+    transform: rotate(135deg);
+  }
+  
+  
+  /* popup */
+  
+  .popup {
     position: relative;
     display: inline-block;
     cursor: pointer;
@@ -51,10 +151,10 @@ li {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-}
-
-/* The actual popup */
-.popup .popuptext {
+  }
+  
+  /* The actual popup */
+  .popup .popuptext {
     visibility: hidden;
     width: 400px;
     height: 400px;
@@ -67,56 +167,56 @@ li {
     z-index: 99;
     top: 300%;
     left: 50%;
-    margin-left: -80px;
-}
-
-
-/* Toggle this class - hide and show the popup */
-.popup .show {
+    margin-left: -300%;
+  }
+  
+  
+  /* Toggle this class - hide and show the popup */
+  .popup .show {
     visibility: visible;
     -webkit-animation: fadeIn 1s;
     animation: fadeIn 1s;
-}
-
-@-webkit-keyframes fadeIn {
+  }
+  
+  @-webkit-keyframes fadeIn {
     from {
         opacity: 0;
     }
-
+  
     to {
         opacity: 1;
     }
-}
-
-@keyframes fadeIn {
+  }
+  
+  @keyframes fadeIn {
     from {
         opacity: 0;
     }
-
+  
     to {
         opacity: 1;
     }
-}
-
-.offer-container{
+  }
+  
+  .offer-container{
     width: 90%;
     margin: auto;
     margin-top: 30px;
     display: flex;
     flex-direction: column;
     gap: 20px;
-}
-.amount{
+  }
+  .amount{
     display: flex;
     justify-content: space-between;
     text-align: center;
     font-weight: 700;
-}
-.green{
+  }
+  .green{
     color: rgb(17, 192, 17);
-}
-
-.popup-container button{
+  }
+  
+  .popup-container button{
     background-color: orange;
     border: none;
     outline: none;
@@ -127,7 +227,7 @@ li {
     margin-top: 30px;
     border-radius: 6px;
     cursor: pointer;
-}
+  }
 
 /* VEDIOS */
 
@@ -170,6 +270,7 @@ li {
     gap: 50px;
     flex-wrap: wrap;
     margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .flex div {
@@ -206,25 +307,55 @@ li {
         padding: 0;
         overflow-x: hidden;
     }
-    .three-dot{
-        display: initial;
-        border-radius: 50%;
-        padding: 10px 15px;
-    }
-    ul{
-        display: none;
-    }
-    .popup .popuptext{
-        width: 300px;
-    }
-   
-    .flex div{
+    .nav-toggler {
+        display: block;
+      }
+    
+      .header .nav {
         width: 100%;
-    }
+        padding: 0;
+        max-height: 0px;
+        overflow: hidden;
+        visibility: hidden;
+        transition: all 0.5s ease;
+      }
+    
+      .header .nav.open {
+        visibility: visible;
+        height: 260px;
+      }
+    
+      .header .nav ul {
+        padding: 12px 15px 0;
+        margin-top: 12px;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+      }
+    
+      .header .nav ul li {
+        display: block;
+        margin: 0;
+      }
+      .popup .popuptext {
+        width: 180px;
+        height: 260px;
+        top: -100%;
+        margin-left:-20%;
+        font-size: 10px;
+      }
+      .offer-container{
+        margin-top: 19px;
+      }
+      .popup-container button{
+        margin-top: 10px;
+        font-size: 10px;
+      }
 }
 
 @media screen and (min-width: 549px) and (max-width:833px){
     .flex div{
         width: 300px;
+    }
+    li{
+        font-size: 15px;
     }
 }
